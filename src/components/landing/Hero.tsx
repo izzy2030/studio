@@ -19,7 +19,9 @@ export function Hero() {
             </Link>
           </Button>
         </div>
-        <WistiaPlayer videoId="zx3wmw2c10" />
+        <div className="w-full">
+          <WistiaPlayer videoId="zx3wmw2c10" />
+        </div>
       </div>
     </section>
   );
