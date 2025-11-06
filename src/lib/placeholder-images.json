@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "Queens Auto Services Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1541794574556-f84b8ab37baa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhdXRvJTIwc2VydmljZSUyMGxvZ298ZW58MHx8fHwxNzYyNDQ2MTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "auto service logo"
+    },
+    {
+      "id": "video_facade",
+      "description": "A video of an auto service shop",
+      "imageUrl": "https://images.unsplash.com/photo-1676018366904-c083ed678e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjI0MjczOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car workshop"
+    }
+  ]
 }
