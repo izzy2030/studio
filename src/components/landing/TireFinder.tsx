@@ -7,8 +7,8 @@ export function TireFinder() {
     const script = document.createElement('script');
     script.src = 'https://tireflow.ezytire.com/6057/1/Script/Client.js';
     script.async = true;
-
-    // The script is expected to find and inject into this div
+    
+    // The script is expected to find and inject into the div with the id 'tire-flow-responsive-container'
     document.body.appendChild(script);
 
     return () => {
