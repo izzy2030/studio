@@ -15,8 +15,8 @@ export function Hero() {
               <span className="animated-cursor" aria-hidden="true" />
             </span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-            Buy tires online and get them installed at our local tire shop. We have a great selection of new tires from the most popular brands.
+          <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow">
+            Buy tires online and get them installed at our <span className="font-semibold text-foreground">local tire shop</span>. We have a great selection of new tires from the most popular brands.
           </p>
           <Button asChild size="lg" className="transition-transform transform hover:scale-105 shadow-lg hover:shadow-primary/40">
             <Link href="#finder">
