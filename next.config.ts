@@ -2,6 +2,8 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  basePath: '/tires',
+  assetPrefix: '/tires',
   output: 'standalone',
   typescript: {
     ignoreBuildErrors: true,
