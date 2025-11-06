@@ -1,32 +1,28 @@
+
 "use client";
 
+import Script from 'next/script';
 import { useEffect } from 'react';
 
 export function TireFinder() {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://tireflow.ezytire.com/6057/1/Script/Client.js';
-    script.async = true;
-    
-    document.body.appendChild(script);
-
+    // This effect is now just for cleanup.
     return () => {
-      // Clean up the script when the component unmounts
-      try {
-        document.body.removeChild(script);
-      } catch (e) {
-        // Ignore error if script is already removed
-      }
-      
-      // The external script adds content inside this div, so we should clear it.
       const container = document.getElementById('tire-flow-responsive-container');
       if (container) {
+        // The external script can sometimes leave elements behind on page navigation.
+        // This clears the container when the component unmounts.
         while (container.firstChild) {
           container.removeChild(container.firstChild);
         }
       }
+      // Also, remove any stylesheets the script might have added to the head
+      const head = document.getElementsByTagName('head')[0];
+      const stylesheets = head.querySelectorAll('link[href*="ezytire.com"]');
+      stylesheets.forEach(sheet => head.removeChild(sheet));
     };
   }, []);
+
 
   return (
     <section id="finder" className="bg-secondary py-20">
@@ -37,8 +33,12 @@ export function TireFinder() {
       </h2>
       <div className="border-y-2 border-dashed border-border/50 bg-background">
         <div id="tire-flow-responsive-container" className="min-h-[500px]">
-          {/* The external script will inject the tire finder tool here */}
+          {/* The Next.js Script component below will load the script, which then injects the tire finder tool here */}
         </div>
+        <Script 
+          src="https://tireflow.ezytire.com/6057/1/Script/Client.js" 
+          strategy="lazyOnload"
+        />
       </div>
     </section>
   );
