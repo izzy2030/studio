@@ -82,3 +82,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .animated-cursor {
+    display: inline-block;
+    border-left: 0.125em solid hsl(var(--primary));
+    margin-left: 0.25em;
+    height: 1em;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: hsl(var(--primary));
+    }
+  }
+}
