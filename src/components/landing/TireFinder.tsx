@@ -2,28 +2,8 @@
 "use client";
 
 import Script from 'next/script';
-import { useEffect } from 'react';
 
 export function TireFinder() {
-  useEffect(() => {
-    // This effect is now just for cleanup.
-    return () => {
-      const container = document.getElementById('tire-flow-responsive-container');
-      if (container) {
-        // The external script can sometimes leave elements behind on page navigation.
-        // This clears the container when the component unmounts.
-        while (container.firstChild) {
-          container.removeChild(container.firstChild);
-        }
-      }
-      // Also, remove any stylesheets the script might have added to the head
-      const head = document.getElementsByTagName('head')[0];
-      const stylesheets = head.querySelectorAll('link[href*="ezytire.com"]');
-      stylesheets.forEach(sheet => head.removeChild(sheet));
-    };
-  }, []);
-
-
   return (
     <section id="finder" className="bg-secondary py-20">
       <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-12 text-center px-6">
