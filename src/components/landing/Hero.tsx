@@ -15,7 +15,7 @@ export function Hero() {
           </p>
           <Button asChild size="lg" className="transition-transform transform hover:scale-105 shadow-lg hover:shadow-primary/40">
             <Link href="#finder">
-              Shop for tires now
+              Shop For Tires Now
             </Link>
           </Button>
         </div>
