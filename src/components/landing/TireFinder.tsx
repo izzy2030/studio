@@ -16,6 +16,13 @@ export function TireFinder() {
         <Script 
           src="https://tireflow.ezytire.com/6057/1/Script/Client.js" 
           strategy="afterInteractive"
+          onLoad={() => {
+            console.log('Tire widget script loaded successfully');
+            console.log('Container element:', document.getElementById('tire-flow-responsive-container'));
+          }}
+          onError={(e) => {
+            console.error('Failed to load tire widget script:', e);
+          }}
         />
       </div>
     </section>
