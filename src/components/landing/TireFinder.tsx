@@ -4,18 +4,25 @@ import { useEffect } from 'react';
 
 export function TireFinder() {
   useEffect(() => {
+    const container = document.getElementById('tire-flow-responsive-container');
+    if (!container) return;
+
     const script = document.createElement('script');
     script.src = 'https://tireflow.ezytire.com/6057/1/Script/Client.js';
     script.async = true;
     
     // The script is expected to find and inject into the div with the id 'tire-flow-responsive-container'
-    document.body.appendChild(script);
+    container.appendChild(script);
 
     return () => {
       // Clean up the script when the component unmounts
-      const existingScript = document.querySelector('script[src="https://tireflow.ezytire.com/6057/1/Script/Client.js"]');
-      if (existingScript && existingScript.parentNode) {
-        existingScript.parentNode.removeChild(existingScript);
+      if (container.contains(script)) {
+        container.removeChild(script);
+      }
+      // The external script might also add other elements that need cleanup.
+      // A simple approach is to clear the container.
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
       }
     };
   }, []);
