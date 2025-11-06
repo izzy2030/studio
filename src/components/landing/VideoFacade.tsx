@@ -35,9 +35,10 @@ export function VideoFacade({ videoId }: VideoFacadeProps) {
     };
 
     const requestOEmbedThumbnail = () => {
-      const oEmbedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
-
-      fetch(oEmbedUrl)
+      const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+      const oEmbedProxyUrl = `/api/oembed?url=${encodeURIComponent(videoUrl)}`;
+      
+      fetch(oEmbedProxyUrl)
         .then(response => (response.ok ? response.json() : Promise.reject()))
         .then(data => {
           if (data && data.thumbnail_url) {
