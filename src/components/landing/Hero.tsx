@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { VideoFacade } from './VideoFacade';
+import { WistiaPlayer } from './WistiaPlayer';
 
 export function Hero() {
   return (
@@ -19,7 +19,7 @@ export function Hero() {
             </Link>
           </Button>
         </div>
-        <VideoFacade videoId="hges1aq53pA" />
+        <WistiaPlayer videoId="zx3wmw2c10" />
       </div>
     </section>
   );
