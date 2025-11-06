@@ -1,8 +1,8 @@
 export function Promotion() {
   return (
-    <section className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6 py-8 text-center shadow-lg">
-        <p className="text-2xl md:text-4xl font-extrabold font-headline leading-tight">
+    <section className="bg-gradient-to-r from-primary to-blue-500 text-primary-foreground">
+      <div className="container mx-auto px-6 py-8 text-center shadow-2xl">
+        <p className="text-2xl md:text-4xl font-extrabold font-headline leading-tight drop-shadow-md">
           Get a FREE Wheel Alignment
           <br className="sm:hidden" /> when you buy a set of 4 new tires.
         </p>

@@ -28,7 +28,7 @@ export function HowItWorks() {
   return (
     <section className="py-20 bg-card">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 drop-shadow-sm">
           Finding Great Tire Deals
         </h2>
         <p className="text-muted-foreground mb-12 text-lg">
@@ -36,9 +36,9 @@ export function HowItWorks() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <Card key={index} className="bg-secondary border-none shadow-sm text-center">
+            <Card key={index} className="bg-secondary border-none shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <CardContent className="p-8">
-                <div className="flex justify-center items-center mb-4 h-16 w-16 mx-auto rounded-lg bg-primary/10 text-primary">
+                <div className="flex justify-center items-center mb-4 h-16 w-16 mx-auto rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                   {step.icon}
                 </div>
                 <h3 className="font-headline text-xl font-bold mb-2 text-foreground">

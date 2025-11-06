@@ -7,7 +7,7 @@ export function Header() {
   const logo = PlaceHolderImages.find((img) => img.id === 'logo');
 
   return (
-    <header className="bg-card shadow-sm sticky top-0 z-50">
+    <header className="bg-card shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" aria-label="Queens Auto Services Home">
           {logo && (
@@ -22,7 +22,7 @@ export function Header() {
             />
           )}
         </Link>
-        <Button asChild className="hidden md:inline-block">
+        <Button asChild className="hidden md:inline-block transition-transform transform hover:scale-105">
           <Link href="#finder">Shop For Tires Now</Link>
         </Button>
       </div>
