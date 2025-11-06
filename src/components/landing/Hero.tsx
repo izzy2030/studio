@@ -8,10 +8,10 @@ export function Hero() {
       <div className="container mx-auto px-6 py-20 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
         <div className="text-center lg:text-left">
           <h1 className="font-headline text-4xl md:text-5xl font-extrabold text-foreground mb-4 leading-tight drop-shadow-lg">
-            Great Deals Online.
+            Find Great Deals On Tires Online.
             <br />
             <span>
-              Local Service
+              Shop Local!
               <span className="animated-cursor" aria-hidden="true" />
             </span>
           </h1>
