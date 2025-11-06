@@ -1,6 +1,4 @@
-
 "use client";
-
 import Script from 'next/script';
 
 export function TireFinder() {
@@ -15,6 +13,10 @@ export function TireFinder() {
         <div id="tire-flow-responsive-container">
           {/* The script will inject the tire finder tool here */}
         </div>
+        <Script 
+          src="https://tireflow.ezytire.com/6057/1/Script/Client.js" 
+          strategy="afterInteractive"
+        />
       </div>
     </section>
   );
