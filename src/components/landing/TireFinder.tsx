@@ -12,7 +12,7 @@ export function TireFinder() {
         or Tire Size
       </h2>
       <div className="border-y-2 border-dashed border-border/50 bg-background">
-        <div id="tire-flow-responsive-container" className="min-h-[500px]">
+        <div id="tire-flow-responsive-container">
           {/* The Next.js Script component below will load the script, which then injects the tire finder tool here */}
         </div>
         <Script 
