@@ -9,12 +9,12 @@ export function TireFinder() {
         <br />
         or Tire Size
       </h2>
-      <div className="border-y-2 border-dashed border-border/50 bg-background">
+      <div className="border-y-2 border-dashed border-border/50 py-10 bg-background">
         <div id="tire-flow-responsive-container">
           {/* The script will inject the tire finder tool here */}
         </div>
         <Script 
-          src="https://tireflow.ezytire.com/6057/1/Script/Client.js" 
+          src="https://tireflow.tireco-op.com/6057/1/Script/Client.js" 
           strategy="afterInteractive"
           onLoad={() => {
             console.log('Tire widget script loaded successfully');
